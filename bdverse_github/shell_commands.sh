@@ -35,5 +35,5 @@ docker stop 666461b1b612
 docker kill $(docker ps -a -q)
 # Delete all containers
 docker rm  $(docker ps -q -a)
-# 
+# Show docker disk usage
 docker system df
