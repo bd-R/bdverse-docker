@@ -1,0 +1,60 @@
+Package: bdchecks
+Title: Biodiversity Data Checks
+Description: Supplies a set of functions to perform and manage data checks for biodiversity data. 
+Version: 0.1.137
+Date: 2019-12-24
+License: GPL-3 | file LICENSE
+URL: https://github.com/bd-R/bdchecks
+BugReports: https://github.com/bd-R/bdchecks/issues
+Authors@R: c(
+    person(
+        "Povilas", "Gibas",
+        email = "povilasgibas@gmail.com",
+        role = c("aut", "cre"),
+        comment = c(ORCID = '0000-0001-5311-6021')),
+    person(
+        "Tomer", "Gueta", 
+        email = "tomer.gu@gmail.com",
+        role = c("aut"),
+        comment = c(ORCID = '0000-0003-1557-8596')),
+    person(
+        "Vijay", "Barve", ,
+        email = "vijay.barve@gmail.com", 
+        role = c("aut"),
+        comment = c(ORCID = '0000-0002-4852-2567')),
+    person(
+        "Thiloshon", "Nagarajah",
+        email = "thiloshon@gmail.com",
+        role = c("aut")),
+    person(
+        "Yohay", "Carmel",
+        email = "yohay@cv.technion.ac.il",
+        role = c("aut"),
+        comment = c(ORCID = '0000-0002-5883-0184'))
+    )
+Depends: R (>= 3.4)
+Imports: gh, methods, magrittr, kableExtra, knitr, rmarkdown, taxize,
+        yaml, xml2
+LazyData: true
+RoxygenNote: 7.0.0
+Encoding: UTF-8
+Suggests: testthat, covr
+RemoteType: github
+RemoteHost: api.github.com
+RemoteRepo: bdchecks
+RemoteUsername: bd-R
+RemoteRef: master
+RemoteSha: c7f4fd4ab1311d61995c778f6e563ba65e281c5b
+GithubRepo: bdchecks
+GithubUsername: bd-R
+GithubRef: master
+GithubSHA1: c7f4fd4ab1311d61995c778f6e563ba65e281c5b
+NeedsCompilation: no
+Packaged: 2019-12-25 15:46:09 UTC; rstudio
+Author: Povilas Gibas [aut, cre] (<https://orcid.org/0000-0001-5311-6021>),
+  Tomer Gueta [aut] (<https://orcid.org/0000-0003-1557-8596>),
+  Vijay Barve [aut] (<https://orcid.org/0000-0002-4852-2567>),
+  Thiloshon Nagarajah [aut],
+  Yohay Carmel [aut] (<https://orcid.org/0000-0002-5883-0184>)
+Maintainer: Povilas Gibas <povilasgibas@gmail.com>
+Built: R 3.6.1; ; 2019-12-25 15:46:10 UTC; unix

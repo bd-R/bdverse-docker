@@ -1,0 +1,31 @@
+---
+title: 'Data check tests report'
+date: "`r date()`"
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: true
+---
+
+```{r, results = "asis", echo = FALSE}
+library(magrittr)
+bdchecks::perform_test_dc()
+for (i in seq_along(data_test)) {
+  cat(paste("\n\n#", names(data_test)[i], "\n"))
+  d <- data_test[[i]]
+  d %>%
+    knitr::kable() %>%
+    kableExtra::kable_styling(
+      full_width = FALSE,
+      bootstrap_options = "striped"
+    ) %>%
+    kableExtra::row_spec(
+      which(d$observed == "pass"), background = "#bce4b4"
+    ) %>%
+    kableExtra::row_spec(
+      which(d$observed == "fail"), background = "#c09697"
+    ) %>%
+    print()
+}
+```
