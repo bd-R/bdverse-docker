@@ -15,17 +15,17 @@ docker rmi 257269da6446
 docker rmi -f 1569813a9126
 
 # Pull an image from docker-hub
-docker image pull bdverse/from-github:19-06-19
+docker image pull bdverse/bdverse-rstudio:2020-03-15
 
 # Run the image, but this time attach a volume # Address: http://192.168.99.100:8787/
-docker run --rm -e PASSWORD=t1234 -p 8787:8787 -v //$(pwd)/qa_github/data://home/rstudio/data bd-qa-github
+docker run --rm -e PASSWORD=t1234 -p 8787:8787 -v //$(pwd)/bdverse_rstudio/data://home/rstudio/data bdverse/bdverse-rstudio:2020-03-15
 
 # Change port
-docker run --rm -e PASSWORD=t1234 -p 28787:8787 -v //$(pwd)/qa_github/data://home/rstudio/data qa-github
+docker run --rm -e PASSWORD=t1234 -p 28787:8787 -v //$(pwd)/qa_github/data://home/rstudio/data bdverse/bdverse-rstudio:2020-03-15
 
 # Play with docker commands:
-docker image pull bdverse/from-github:19-06-19
-docker run --rm -e PASSWORD=t1234 -p 8787:8787 bdverse/from-github:19-06-19
+docker image pull bdverse/bdverse-rstudio:2020-03-15
+docker run --rm -e PASSWORD=t1234 -p 8787:8787 bdverse/bdverse-rstudio:2020-03-15
 
 # list docker containers
 docker ps 
